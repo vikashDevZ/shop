@@ -48,7 +48,7 @@ const App = () => {
 
   useEffect(() => {
     fetchProducts();
-    setBasket(getItemFromLocalStorage("basket"));
+    setBasket(getItemFromLocalStorage("basket") || []);
   }, []);
 
   useEffect(() => {
